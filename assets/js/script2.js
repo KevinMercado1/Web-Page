@@ -68,13 +68,13 @@ function loadPurchaseDetails() {
       <p>
         ${item.name} - $${item.price}
       </p>`
-    ;
+    
     purchaseDetails.appendChild(div);
     total += parseFloat(item.price);
   });
 
   const totalDiv = document.createElement('div');
-  totalDiv.innerHTML = <p>Total: $${total.toFixed(2)}</p>;
+  totalDiv.innerHTML = `<p>Total: $${total.toFixed(2)}</p>`;
   purchaseDetails.appendChild(totalDiv);
 }
 
