@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/compra.css" />
+    <title>Confirmación de Pago</title>
+  </head>
+  <body>
+    <header>
+      <h1>Confirmación de Pago</h1>
+    </header>
+
+    <main>
+      <section class="purchase-details">
+        <h2>Productos en tu carrito:</h2>
+        <div class="purchase-items">
+          <!-- Los productos del carrito se cargarán aquí -->
+        </div>
+        <div>
+          <h3>Total: <span id="total-price">0.00</span></h3>
+        </div>
+      </section>
+
+      <section class="payment-container">
+        <h3>Información de Pago</h3>
+        <form id="payment-form">
+          <input
+            type="text"
+            id="full-name"
+            placeholder="Nombre Completo"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            placeholder="Correo Electrónico"
+            required
+          />
+          <input type="tel" id="phone" placeholder="Teléfono" required />
+          <input
+            type="number"
+            id="card-number"
+            placeholder="Número de Tarjeta"
+            required
+          />
+          <button type="submit">Realizar Pago</button>
+        </form>
+      </section>
+
+      <section class="success-message" style="display: none">
+        <p>¡Pago realizado con éxito!</p>
+      </section>
+      <section class="error-message" style="display: none">
+        <p>Hubo un error al procesar tu pago. Intenta nuevamente.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2024 Joyerías y Accesorios Kesajho. Todos los derechos
+        reservados.
+      </p>
+      <nav>
+        <a href="index.html" aria-label="Ir a la página de inicio">Inicio</a>
+        <a href="productos.html" aria-label="Ver productos disponibles"
+          >Productos</a
+        >
+        <a href="about.html" aria-label="Conocer más sobre nosotros"
+          >Acerca de</a
+        >
+        <a href="contacto.html" aria-label="Contactarnos">Contacto</a>
+        <a href="carrito.html" aria-label="Ver carrito de compras">Carrito</a>
+      </nav>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

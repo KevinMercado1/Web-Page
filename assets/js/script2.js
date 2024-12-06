@@ -117,3 +117,12 @@ if (document.querySelector('.cart-items')) {
 if (document.querySelector('.purchase-details')) {
   loadPurchaseDetails();
 }
+// Botón de proceder al pago
+const checkoutButton = document.querySelector('#checkout-button');
+checkoutButton.addEventListener('click', function () {
+  // Aquí iría el código para procesar el pago
+  alert('Pago realizado con éxito');
+
+  // Limpiar el carrito después del pago
+  localStorage.removeItem('cart');
+});

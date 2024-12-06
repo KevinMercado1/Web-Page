@@ -27,14 +27,6 @@ function addToCart(productId) {
   alert(`${product.name} añadido al carrito.`);
 }
 
-// Agrega eventos a los botones "Añadir al carrito"
-document.querySelectorAll('.add-to-cart').forEach((button) => {
-  button.addEventListener('click', () => {
-    const productId = parseInt(button.dataset.id); // Obtiene el ID del producto desde el atributo data-id
-    addToCart(productId); // Llama a la función para añadir el producto al carrito
-  });
-});
-
 // Función para cargar los productos del carrito en carrito.html
 function loadCartItems() {
   const cartItemsContainer = document.querySelector('.cart-items');
@@ -68,25 +60,34 @@ function removeFromCart(index) {
 
 // Función para cargar el resumen de compra en compra.html
 function loadPurchaseDetails() {
-  const purchaseDetails = document.querySelector('.purchase-details');
+  const purchaseItemsContainer = document.querySelector('.purchase-items');
+  const totalPriceElement = document.getElementById('total-price');
 
-  if (!purchaseDetails) return; // Evita errores si el elemento no existe
+  if (!purchaseItemsContainer || !totalPriceElement) return;
 
-  purchaseDetails.innerHTML = ''; // Limpia el contenedor previamente
-  let total = 0;
+  purchaseItemsContainer.innerHTML = ''; // Limpia el contenedor antes de cargar los productos
 
+  if (cart.length === 0) {
+    purchaseItemsContainer.innerHTML = '<p>El carrito está vacío.</p>';
+    totalPriceElement.textContent = '0.00';
+    return;
+  }
+
+  let totalPrice = 0;
+
+  // Recorre el carrito y agrega los productos a la página
   cart.forEach((item) => {
     const div = document.createElement('div');
+    div.classList.add('purchase-item');
     div.innerHTML = `
       <p>${item.name} - $${item.price}</p>
     `;
-    purchaseDetails.appendChild(div);
-    total += item.price;
+    purchaseItemsContainer.appendChild(div);
+    totalPrice += item.price;
   });
 
-  const totalDiv = document.createElement('div');
-  totalDiv.innerHTML = `<p>Total: $${total.toFixed(2)}</p>`;
-  purchaseDetails.appendChild(totalDiv);
+  // Actualiza el total
+  totalPriceElement.textContent = totalPrice.toFixed(2);
 }
 
 // Evento: proceder al pago (navegación a compra.html)
@@ -97,11 +98,72 @@ if (proceedToCheckoutButton) {
   });
 }
 
-// Carga dinámica en las páginas según los elementos disponibles
-if (document.querySelector('.cart-items')) {
-  loadCartItems();
-}
+document.addEventListener('DOMContentLoaded', function () {
+  // Función para procesar el pago
+  const payButton = document.querySelector('#pay-button');
+  if (payButton) {
+    payButton.addEventListener('click', function () {
+      // Aquí iría la lógica para procesar el pago (puedes integrar una API de pago como Stripe o PayPal)
+      alert('Pago realizado con éxito.');
 
-if (document.querySelector('.purchase-details')) {
-  loadPurchaseDetails();
+      // Limpiar el carrito después del pago
+      localStorage.removeItem('cart');
+
+      // Opcional: Redirigir al usuario a una página de agradecimiento
+      window.location.href = 'gracias.html'; // Redirige a una página de agradecimiento
+    });
+  }
+
+  // Aquí puedes colocar el resto de las funciones que manipulan el carrito
+  if (document.querySelector('.cart-items')) {
+    loadCartItems();
+  }
+
+  if (document.querySelector('.purchase-items')) {
+    loadPurchaseDetails();
+  }
+});
+
+// Agrega eventos a los botones "Añadir al carrito"
+document.querySelectorAll('.add-to-cart').forEach((button) => {
+  button.addEventListener('click', () => {
+    const productId = parseInt(button.dataset.id); // Obtiene el ID del producto desde el atributo data-id
+    addToCart(productId); // Llama a la función para añadir el producto al carrito
+  });
+});
+
+// Función para cargar el resumen de compra en compra.html
+function loadPurchaseDetails() {
+  const purchaseItemsContainer = document.querySelector('.purchase-items');
+  const totalPriceElement = document.getElementById('total-price');
+
+  if (!purchaseItemsContainer || !totalPriceElement) return;
+
+  purchaseItemsContainer.innerHTML = ''; // Limpia el contenedor antes de cargar los productos
+
+  if (cart.length === 0) {
+    purchaseItemsContainer.innerHTML = '<p>El carrito está vacío.</p>';
+    totalPriceElement.textContent = '0.00';
+    return;
+  }
+
+  let totalPrice = 0;
+
+  // Recorre el carrito y agrega los productos a la página
+  cart.forEach((item) => {
+    const div = document.createElement('div');
+    div.classList.add('purchase-item');
+    div.innerHTML = `
+      <div class="purchase-item-details">
+        <p><strong>${item.name}</strong></p>
+        <p>Precio: $${item.price.toFixed(2)}</p>
+        <img src="${item.img}" alt="${item.name}" class="purchase-item-image">
+      </div>
+    `;
+    purchaseItemsContainer.appendChild(div);
+    totalPrice += item.price;
+  });
+
+  // Actualiza el total
+  totalPriceElement.textContent = totalPrice.toFixed(2);
 }
