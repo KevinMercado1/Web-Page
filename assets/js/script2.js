@@ -64,11 +64,11 @@ function loadPurchaseDetails() {
 
   cart.forEach((item) => {
     const div = document.createElement('div');
-    div.innerHTML = (
+    div.innerHTML = `
       <p>
         ${item.name} - $${item.price}
-      </p>
-    );
+      </p>`
+    ;
     purchaseDetails.appendChild(div);
     total += parseFloat(item.price);
   });
