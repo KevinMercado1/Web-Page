@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -26,7 +27,7 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* Hero Section */
+/* Sección Hero */
 .hero {
   position: relative;
   text-align: center;
@@ -35,7 +36,12 @@ header nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, rgba(0, 86, 214, 0.8), rgba(0, 86, 214, 0.5)), url('hero-bg.jpg');
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 86, 214, 0.8),
+      rgba(0, 86, 214, 0.5)
+    ),
+    url('hero-bg.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -64,7 +70,7 @@ header nav a:hover {
   color: white;
 }
 
-/* Products Section */
+/* Sección de Productos */
 .products {
   background: #f9f9f9;
   padding: 40px;
@@ -106,7 +112,7 @@ header nav a:hover {
   background: #003c99;
 }
 
-/* Features Section */
+/* Sección de Características */
 .features {
   padding: 40px;
   background: #fff;
@@ -130,6 +136,8 @@ header nav a:hover {
   height: 80px;
   margin-bottom: 10px;
 }
+
+/* Footer */
 .footer {
   background: #003c99;
   color: white;
@@ -162,8 +170,7 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* Contact Section */
-/* Contact Section */
+/* Sección de Contacto */
 .contact {
   padding: 40px 20px;
   background-color: #f9f9f9;
@@ -179,10 +186,10 @@ header nav a:hover {
 /* Contenedor general de formulario y mapa */
 .contact-container {
   display: flex;
-  gap: 30px; /* Espaciado entre el formulario y el mapa */
+  gap: 30px;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap; /* Responsivo: apilar en pantallas pequeñas */
+  flex-wrap: wrap;
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
@@ -194,7 +201,7 @@ header nav a:hover {
   flex: 1;
   min-width: 300px;
   padding: 20px;
-  background: #f4f4f4; /* Fondo diferente para separarlo del mapa */
+  background: #f4f4f4;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -215,7 +222,8 @@ header nav a:hover {
   margin-bottom: 5px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
@@ -223,7 +231,8 @@ header nav a:hover {
   border-radius: 5px;
 }
 
-.contact-form input:focus, .contact-form textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
   border-color: #0056d6;
   box-shadow: 0 0 5px rgba(0, 86, 214, 0.5);
@@ -246,7 +255,7 @@ header nav a:hover {
 
 /* Estilos del mapa */
 .contact-map {
-  flex: 1; /* El mapa ocupa el mismo espacio que el formulario */
+  flex: 1;
   min-width: 300px;
   height: auto;
   padding: 10px;
@@ -257,8 +266,8 @@ header nav a:hover {
 
 .contact-map iframe {
   width: 100%;
-  height: 100%; /* Aseguramos que se ajuste al contenedor */
-  min-height: 300px; /* Altura mínima para pantallas pequeñas */
+  height: 100%;
+  min-height: 300px;
   border: none;
   border-radius: 10px;
 }

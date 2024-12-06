@@ -1,53 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
-    <link rel = "stylesheet" href="./assets/css/car.css">
-</head>
-<body>
-    <header class = "header">
-        <div class="icono-carrito"></div>
-        <div class = "header-content">
-            <h1>Carrito de compras</h1>
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="productos.html">Productos</a>
-                <a href="acercade.html">Acerca de</a>
-                <a href="contacto.html">Contacto</a>
-                <a href="carrito.html">Carrito</a>
-              </nav>
-        </div>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compras - Bootcamp Tienda</title>
+    <link rel="stylesheet" href="./assets/css/car.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div
+        class="icono-carrito"
+        aria-label="Icono del carrito de compras"
+      ></div>
+      <div class="header-content">
+        <h1>Carrito de compras</h1>
+        <nav>
+          <a href="index.html" aria-label="Ir a la página de inicio">Inicio</a>
+          <a href="productos.html" aria-label="Ver productos disponibles"
+            >Productos</a
+          >
+          <a href="about.html" aria-label="Conocer más sobre nosotros"
+            >Acerca de</a
+          >
+          <a href="contacto.html" aria-label="Contactarnos">Contacto</a>
+          <a href="carrito.html" aria-label="Ver carrito de compras">Carrito</a>
+        </nav>
+      </div>
     </header>
-<main class="cart">
-    <h2>Tu carrito</h2>
-    <p>Revisa los productos seleccionados antes de proceder al pago.</p>
-    <div class ="cart-container">
 
+    <main class="cart">
+      <h2>Tu carrito</h2>
+      <p>Revisa los productos seleccionados antes de proceder al pago.</p>
+      <div class="cart-container">
         <div class="cart-items">
-
+          <!-- Aquí se cargarán los productos del carrito dinámicamente -->
         </div>
         <div class="cart-summary">
-            <h3>Resumen del pedido</h3>
-            <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
-            <button class="btn proceed-to-checkout">proceder al pago</button>
+          <h3>Resumen del pedido</h3>
+          <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+          <button class="btn proceed-to-checkout" aria-label="Proceder al pago">
+            Proceder al pago
+          </button>
         </div>
-    </div>   
-</main>
-    
+      </div>
+    </main>
 
-
-<footer class ="footer">
-    <p>2024 Bootcamp Tienda. Todos los derechos reservados</p>
-    <div class="footer-links">
-        <a href ="about.html">Acerca de</a>
-        <a href ="contacto.html">Contacto</a>
-        <a href ="politicas.html">Políticas</a>
-    </div>
+    <footer class="footer">
+      <p>
+        &copy; 2024 Joyerías y Accesorios Kesajho. Todos los derechos
+        reservados.
+      </p>
+      <div class="footer-links">
+        <a href="about.html" aria-label="Leer más sobre nuestra empresa"
+          >Acerca de</a
+        >
+        <a href="contacto.html" aria-label="Contactarnos">Contacto</a>
+        <a href="politicas.html" aria-label="Leer nuestras políticas"
+          >Políticas</a
+        >
+      </div>
     </footer>
 
-    <script src = "./assets/js/script2.js"></script>
-</body>
+    <script src="./assets/js/script2.js"></script>
+  </body>
 </html>
-

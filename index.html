@@ -1,97 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JOYERIAS & ACCESORIOS KESAJHO</title>
-    <link rel = "stylesheet" href ="./assets/css/styles.css">
-</head>
-<body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JOYERIAS Y ACCESORIOS KESAJHO</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="header-content">
-            <h1>JOYERIAS & ACCESORIOS KESAJHO</h1>
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="productos.html">Productos</a>
-                <a href="about.html">Acerca de</a>
-                <a href="contacto.html">Contacto</a>
-                <a href="carrito.html">Carrito</a>
-              </nav>
-        </div>
+      <div class="header-content">
+        <h1>JOYERIAS Y ACCESORIOS KESAJHO</h1>
+        <nav>
+          <a href="index.html">Inicio</a>
+          <a href="productos.html">Productos</a>
+          <a href="about.html">Acerca de</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="carrito.html">Carrito</a>
+        </nav>
+      </div>
     </header>
 
-    <section class = "hero">
-            <div class ="hero-content">
-                <h1> Bienvenidos a JOYERIAS & ACCESORIOS KESAJHO</h1>
-                <p>Descubre productos exclusivos y ofertas únicas</p>
-                <a href ="#productos" class="btn hero-btn">Ver productos</a>
-            </div>
-        <div class ="hero-bg"></div>    
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Bienvenidos a JOYERIAS Y ACCESORIOS KESAJHO</h1>
+        <p>Descubre productos exclusivos y ofertas únicas</p>
+        <a href="#productos" class="btn hero-btn">Ver productos</a>
+      </div>
+      <div class="hero-bg"></div>
     </section>
 
-    <section class = "products" id = "productos">
-        <h2>Nuestros Productos</h2>
-        <div class="product-list">
-            <div class = "product">
-                <img src="./assets/images/Reloj.jpg" alt="Producto 1">
-                <h3>Reloj </h3>
-                <p>Este reloj es unos de los mejores</p>
-                <p class = "price">$10.000</p>
-                <button class="add-to-cart" data-name="Producto 1" data-price="10"> Añadir al carrito</button>
-            </div>
-
-            <div class = "product">
-                <img src="./assets/images/manilla.jpg" alt="Producto 2">
-                <h3>Manilla de oro </h3>
-                <p>Esta manilla es unas de las mejores del mercado</p>
-                <p class = "price">$20.999</p>
-                <button class="add-to-cart" data-name="Producto 2" data-price="20"> Añadir al carrito</button>
-            </div>
-
-            <div class = "product">
-                <img src="./assets/images/arete.jpg" alt="Producto 3">
-                <h3>Arete </h3>
-                <p>Estos aretes son una edicion limitada</p>
-                <p>$30.000</p>
-                <button class="add-to-cart" data-name="Producto 3" data-price="30"> Añadir al carrito</button>
-            </div>
+    <section class="products" id="productos">
+      <h2>Nuestros Productos</h2>
+      <div class="product-list">
+        <div class="product">
+          <img
+            src="./assets/images/Reloj.jpg"
+            alt="Reloj elegante de pulsera con correa metálica"
+          />
+          <h3>Reloj</h3>
+          <p>
+            Este reloj es uno de los mejores para un look moderno y sofisticado.
+          </p>
+          <p class="price">$10,000</p>
+          <button
+            class="add-to-cart"
+            data-name="Reloj elegante"
+            data-price="10000"
+            aria-label="Añadir reloj al carrito"
+          >
+            Añadir al carrito
+          </button>
         </div>
+
+        <div class="product">
+          <img
+            src="./assets/images/manilla.jpg"
+            alt="Manilla de oro con detalles elegantes"
+          />
+          <h3>Manilla de oro</h3>
+          <p>
+            Esta manilla es una de las mejores del mercado, ideal para cualquier
+            ocasión.
+          </p>
+          <p class="price">$20,999</p>
+          <button
+            class="add-to-cart"
+            data-name="Manilla de oro"
+            data-price="20999"
+            aria-label="Añadir manilla al carrito"
+          >
+            Añadir al carrito
+          </button>
+        </div>
+
+        <div class="product">
+          <img
+            src="./assets/images/arete.jpg"
+            alt="Arete de edición limitada con piedras preciosas"
+          />
+          <h3>Arete</h3>
+          <p>
+            Estos aretes son una edición limitada, perfectos para ocasiones
+            especiales.
+          </p>
+          <p class="price">$30,000</p>
+          <button
+            class="add-to-cart"
+            data-name="Arete edición limitada"
+            data-price="30000"
+            aria-label="Añadir arete al carrito"
+          >
+            Añadir al carrito
+          </button>
+        </div>
+      </div>
     </section>
+
     <section class="features">
-        <h2>Por qué elegirnos</h2>
-        <div class="feature-list">
-          <div class="feature">
-            <img src="./assets/images/envio.webp" alt="Envío rápido">
-            <h3>Envío Rápido</h3>
-            <p>Recibe tus productos en tiempo récord.</p>
-          </div>
-          <div class="feature">
-            <img src="./assets/images/altacalidad.png" alt="Alta calidad">
-            <h3>Alta Calidad</h3>
-            <p>Solo seleccionamos productos de la mejor calidad.</p>
-          </div>
-          <div class="feature">
-            <img src="./assets/images/ofertas.exclusivas.jpg" alt="Ofertas exclusivas">
-            <h3>Ofertas Exclusivas</h3>
-            <p>Aprovecha precios irresistibles cada semana.</p>
-          </div>
+      <h2>Por qué elegirnos</h2>
+      <div class="feature-list">
+        <div class="feature">
+          <img src="./assets/images/envio.webp" alt="Envío rápido" />
+          <h3>Envío Rápido</h3>
+          <p>Recibe tus productos en tiempo récord.</p>
         </div>
-      </section>
+        <div class="feature">
+          <img src="./assets/images/altacalidad.png" alt="Alta calidad" />
+          <h3>Alta Calidad</h3>
+          <p>Solo seleccionamos productos de la mejor calidad.</p>
+        </div>
+        <div class="feature">
+          <img
+            src="./assets/images/ofertas.exclusivas.jpg"
+            alt="Ofertas exclusivas de la tienda"
+          />
+          <h3>Ofertas Exclusivas</h3>
+          <p>Aprovecha precios irresistibles cada semana.</p>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer">
-        <div class="footer-container">
-          <p>© 2024 Bootcamp Tienda. Todos los derechos reservados.</p>
-          <div class="social-icons">
-            <a href="#"><img src="./assets/images/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="./assets/images/logotipos.png" alt="Twitter"></a>
-            <a href="#"><img src="./assets/images/instagram.png" alt="Instagram"></a>
-          </div>
-          <div class="footer-links">
-            <a href="acercade.html">Acerca de</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="politicas.html">Políticas</a>
-          </div>
+      <div class="footer-container">
+        <p>
+          &copy; 2024 Joyerías y Accesorios Kesajho. Todos los derechos
+          reservados.
+        </p>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <img src="./assets/images/facebook.png" alt="Facebook" />
+          </a>
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            aria-label="Twitter"
+          >
+            <img src="./assets/images/logotipos.png" alt="Twitter" />
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <img src="./assets/images/instagram.png" alt="Instagram" />
+          </a>
         </div>
-      </footer>
+        <div class="footer-links">
+          <a href="about.html">Acerca de</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="politicas.html">Políticas</a>
+        </div>
+      </div>
+    </footer>
+
     <script src="./assets/js/script.js"></script>
-</body>
+  </body>
 </html>
