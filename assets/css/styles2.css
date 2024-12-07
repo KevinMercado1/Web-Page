@@ -28,10 +28,12 @@ header nav a:hover {
 }
 
 header img {
-  position: absolute;  /* Esto permite mover la imagen de manera precisa */
-  right: 0;  /* La mueve completamente a la derecha */
+  position: absolute; /* Esto permite mover la imagen de manera precisa */
+  right: 0; /* La mueve completamente a la derecha */
   top: 50%; /* Centra la imagen verticalmente */
-  transform: translateY(-400%); /* Ajusta la posición para que quede perfectamente centrada verticalmente */
+  transform: translateY(
+    -400%
+  ); /* Ajusta la posición para que quede perfectamente centrada verticalmente */
   margin: 0; /* Elimina cualquier margen */
   width: 150px; /* Tamaño de la imagen */
 }

@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header */
+header {
+  position: relative; /* Necesario para que el logo absoluto se relacione al header */
+  background: #000000;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Espacia los elementos del header */
+  align-items: center; /* Alinea verticalmente */
+}
+
+header nav a {
+  color: rgb(223, 215, 61);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+header img.logo {
+  position: absolute; /* Posición absoluta para colocarlo en el borde derecho */
+  right: 20px; /* Separación del borde derecho */
+  top: 50%; /* Centrado vertical */
+  transform: translateY(-50%); /* Ajuste para centrar completamente */
+  margin: 0;
+  width: 150px; /* Tamaño del logo */
+}
+
+/* Contact Page */
+.contact-page {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contact-page h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0056d6;
+}
+
+.contact-page p {
+  margin-bottom: 30px;
+}
+
+/* Contact Form */
+.contact-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  background: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.contact-form .btn {
+  background: #0056d6;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .btn:hover {
+  background-color: #003c99;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  background: #000000;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-info h3 {
+  color: rgb(223, 215, 61);
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background: #003c99;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* Estilos para los iconos de redes sociales */
+footer .social-icons img {
+  width: 30px; /* Tamaño del icono */
+  height: auto; /* Mantener proporción */
+  margin: 0 10px; /* Separación entre iconos */
+  transition: transform 0.3s ease; /* Efecto al pasar el mouse */
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
