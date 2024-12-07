@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  background: #0056d6;
+  background: #000000;
   color: #fff;
   padding: 20px;
   display: flex;
@@ -17,7 +17,7 @@ header {
 }
 
 header nav a {
-  color: white;
+  color: rgb(223, 215, 61);
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
@@ -27,19 +27,28 @@ header nav a:hover {
   text-decoration: underline;
 }
 
+header img {
+  position: absolute;  /* Esto permite mover la imagen de manera precisa */
+  right: 0;  /* La mueve completamente a la derecha */
+  top: 50%; /* Centra la imagen verticalmente */
+  transform: translateY(-400%); /* Ajusta la posición para que quede perfectamente centrada verticalmente */
+  margin: 0; /* Elimina cualquier margen */
+  width: 150px; /* Tamaño de la imagen */
+}
+
 /* Sección Hero */
 .hero {
   position: relative;
   text-align: center;
   color: white;
-  height: 60vh;
+  height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(
       to bottom,
-      rgba(0, 86, 214, 0.8),
-      rgba(0, 86, 214, 0.5)
+      rgba(2, 32, 76, 0.8),
+      rgba(5, 59, 140, 0.5)
     ),
     url('hero-bg.jpg');
   background-size: cover;
@@ -70,46 +79,22 @@ header nav a:hover {
   color: white;
 }
 
-/* Sección de Productos */
-.products {
-  background: #f9f9f9;
-  padding: 40px;
-  text-align: center;
-}
-
-.product-list {
+/* Estilos para el contenedor de la imagen */
+.image-container {
   display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  flex-wrap: wrap;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
+  height: 100vh; /* Esto hace que el contenedor ocupe la mitad de la pantalla (50% de la altura de la vista) */
+  width: 100%; /* Ancho completo */
+  margin: 0 auto; /* Centra el contenedor en la página */
+  background-color: #000000;
 }
 
-.product {
-  background: white;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 30%;
-}
-
-.product img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.product button {
-  background: #0056d6;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.product button:hover {
-  background: #003c99;
+/* Estilos para la imagen */
+.centered-image {
+  max-width: 100%; /* Asegura que la imagen no sea más ancha que el contenedor */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  max-height: 100%; /* La imagen puede ocupar hasta el 100% de la altura del contenedor */
 }
 
 /* Sección de Características */

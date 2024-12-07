@@ -1,3 +1,262 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background: #000000;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  color: rgb(223, 215, 61);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+header img {
+  position: absolute;  /* Esto permite mover la imagen de manera precisa */
+  right: 0;  /* La mueve completamente a la derecha */
+  top: 50%; /* Centra la imagen verticalmente */
+  transform: translateY(-400%); /* Ajusta la posición para que quede perfectamente centrada verticalmente */
+  margin: 0; /* Elimina cualquier margen */
+  width: 150px; /* Tamaño de la imagen */
+}
+
+/* Sección Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(2, 32, 76, 0.8),
+      rgba(5, 59, 140, 0.5)
+    ),
+    url('hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-btn {
+  background: white;
+  color: #0056d6;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #003c99;
+  color: white;
+}
+
+/* Estilos para el contenedor de la imagen */
+.image-container {
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
+  height: 100vh; /* Esto hace que el contenedor ocupe la mitad de la pantalla (50% de la altura de la vista) */
+  width: 100%; /* Ancho completo */
+  margin: 0 auto; /* Centra el contenedor en la página */
+  background-color: #000000;
+}
+
+/* Estilos para la imagen */
+.centered-image {
+  max-width: 100%; /* Asegura que la imagen no sea más ancha que el contenedor */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  max-height: 100%; /* La imagen puede ocupar hasta el 100% de la altura del contenedor */
+}
+
+/* Sección de Características */
+.features {
+  padding: 40px;
+  background: #fff;
+  text-align: center;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.feature {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.feature img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  background: #003c99;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Sección de Contacto */
+.contact {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0056d6;
+}
+
+/* Contenedor general de formulario y mapa */
+.contact-container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del formulario */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #0056d6;
+  box-shadow: 0 0 5px rgba(0, 86, 214, 0.5);
+}
+
+.contact-form .btn {
+  background: #0056d6;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .btn:hover {
+  background-color: #003c99;
+}
+
+/* Estilos del mapa */
+.contact-map {
+  flex: 1;
+  min-width: 300px;
+  height: auto;
+  padding: 10px;
+  background: #e9e9e9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border: none;
+  border-radius: 10px;
+}
+
 /* General Styles for Product Page */
 .products-page {
   padding: 20px;
@@ -11,7 +270,7 @@
 .category h3 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: #0056d6;
+  color: #000000;
 }
 
 .product-list {
@@ -57,7 +316,7 @@
 }
 
 .product button {
-  background: #0056d6;
+  background: #000000;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -67,5 +326,5 @@
 }
 
 .product button:hover {
-  background-color: #003c99;
+  background-color: #000000;
 }

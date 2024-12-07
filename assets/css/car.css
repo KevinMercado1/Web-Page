@@ -7,8 +7,37 @@ body {
   line-height: 1.6;
 }
 
+header {
+  background: #000000;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  color: rgb(223, 215, 61);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+header img {
+  position: absolute;  /* Esto permite mover la imagen de manera precisa */
+  right: 0;  /* La mueve completamente a la derecha */
+  top: 50%; /* Centra la imagen verticalmente */
+  transform: translateY(-400%); /* Ajusta la posición para que quede perfectamente centrada verticalmente */
+  margin: 0; /* Elimina cualquier margen */
+  width: 150px; /* Tamaño de la imagen */
+}
+
 h2, h3 {
-  color: #0056d6;
+  color: #000000;
   text-align: center;
 }
 
@@ -19,7 +48,7 @@ p {
 
 /* Header */
 .header {
-  background: #003c99;
+  background: #000000;
   color: white;
   display: flex;
   justify-content: space-between;
